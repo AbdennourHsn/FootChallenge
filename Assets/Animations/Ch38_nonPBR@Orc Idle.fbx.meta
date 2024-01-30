@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: d527d1db71626be47afe36a6095fee92
+guid: f669e6314e3104111aa1f51a1097af6f
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: Receive Idle
+    second: Orc Idle
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -19,8 +19,7 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 1
     motionNodeName: 
-    rigImportErrors: "Copied Avatar Rig Configuration mis-match. Transform hierarchy
-      does not match:\n\tTransform 'mixamorig1:Hips' for human bone 'Hips' not found\n"
+    rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -37,11 +36,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Receive Idle
+      name: Orc Idle
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 59
+      lastFrame: 160
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
