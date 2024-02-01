@@ -5,7 +5,7 @@ using UnityEngine;
 public class AnimationManager : MonoBehaviour
 {
     private Animator animator;
-    // Start is called before the first frame update
+
     void Start()
     {
         this.animator = GetComponent<Animator>();
@@ -16,23 +16,46 @@ public class AnimationManager : MonoBehaviour
         this.animator.Play(name, 0, trasactionSpeed);
     }
 
-    public void Update()
+    public void MoveLeft()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            PlayAnimation("Soccer Pass Right Leg");
-        }
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            PlayAnimation("Soccer Pass Left Leg");
-        }
+        PlayAnimation("Move Left");
+    }
+
+    public void MoveRight()
+    {
+        PlayAnimation("Move Right");
+    }
+
+    public void PasseLeft()
+    {
+        PlayAnimation("Soccer Pass Left Leg");
+    }
+
+    public void PasseRight()
+    {
+        PlayAnimation("Soccer Pass Right Leg");
+    }
+
+    public void Idle()
+    {
+        PlayAnimation("Idle");
+    }
+
+    public void Victory()
+    {
+
+    }
+
+    public void Lose()
+    {
+
+    }
+
+    private void Update()
+    {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            PlayAnimation("Victory");
-        }
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            PlayAnimation("Defeat");
+            PasseLeft();
         }
     }
 }
