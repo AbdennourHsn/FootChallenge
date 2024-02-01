@@ -1,0 +1,102 @@
+{
+  "GlobalObjectId_V1-2-d6a4cf6206ce2e84182207b668b67206-1220445283-0": {
+    "GameObjectId": "GlobalObjectId_V1-2-d6a4cf6206ce2e84182207b668b67206-1220445283-0",
+    "SectionColorRed": 0.0,
+    "SectionColorGreen": 0.77,
+    "SectionColorBlue": 0.77,
+    "SectionAltColorRed": 0.0,
+    "SectionAltColorGreen": 0.77,
+    "SectionAltColorBlue": 0.77,
+    "RemoveSectionDuringBuild": false
+  },
+  "GlobalObjectId_V1-2-d6a4cf6206ce2e84182207b668b67206-495376879-0": {
+    "GameObjectId": "GlobalObjectId_V1-2-d6a4cf6206ce2e84182207b668b67206-495376879-0",
+    "SectionColorRed": 0.5,
+    "SectionColorGreen": 0.5,
+    "SectionColorBlue": 1.0,
+    "SectionAltColorRed": 0.125,
+    "SectionAltColorGreen": 0.125,
+    "SectionAltColorBlue": 0.5,
+    "RemoveSectionDuringBuild": false
+  },
+  "GlobalObjectId_V1-2-d6a4cf6206ce2e84182207b668b67206-274930384557823416-0": {
+    "GameObjectId": "GlobalObjectId_V1-2-d6a4cf6206ce2e84182207b668b67206-274930384557823416-0",
+    "SectionColorRed": 0.35,
+    "SectionColorGreen": 0.5,
+    "SectionColorBlue": 0.77,
+    "SectionAltColorRed": 0.35,
+    "SectionAltColorGreen": 0.5,
+    "SectionAltColorBlue": 0.77,
+    "RemoveSectionDuringBuild": false
+  },
+  "GlobalObjectId_V1-2-d6a4cf6206ce2e84182207b668b67206-1736755654-0": {
+    "GameObjectId": "GlobalObjectId_V1-2-d6a4cf6206ce2e84182207b668b67206-1736755654-0",
+    "SectionColorRed": 0.35,
+    "SectionColorGreen": 0.5,
+    "SectionColorBlue": 0.77,
+    "SectionAltColorRed": 0.35,
+    "SectionAltColorGreen": 0.5,
+    "SectionAltColorBlue": 0.77,
+    "RemoveSectionDuringBuild": false
+  },
+  "GlobalObjectId_V1-2-d6a4cf6206ce2e84182207b668b67206-426208890-0": {
+    "GameObjectId": "GlobalObjectId_V1-2-d6a4cf6206ce2e84182207b668b67206-426208890-0",
+    "SectionColorRed": 0.56,
+    "SectionColorGreen": 0.76,
+    "SectionColorBlue": 0.34,
+    "SectionAltColorRed": 0.56,
+    "SectionAltColorGreen": 0.76,
+    "SectionAltColorBlue": 0.34,
+    "RemoveSectionDuringBuild": false
+  },
+  "GlobalObjectId_V1-2-d6a4cf6206ce2e84182207b668b67206-394528653-0": {
+    "GameObjectId": "GlobalObjectId_V1-2-d6a4cf6206ce2e84182207b668b67206-394528653-0",
+    "SectionColorRed": 0.77,
+    "SectionColorGreen": 0.35,
+    "SectionColorBlue": 0.35,
+    "SectionAltColorRed": 0.77,
+    "SectionAltColorGreen": 0.35,
+    "SectionAltColorBlue": 0.35,
+    "RemoveSectionDuringBuild": false
+  },
+  "GlobalObjectId_V1-2-d6a4cf6206ce2e84182207b668b67206-1076882513-0": {
+    "GameObjectId": "GlobalObjectId_V1-2-d6a4cf6206ce2e84182207b668b67206-1076882513-0",
+    "SectionColorRed": 0.5,
+    "SectionColorGreen": 0.833333254,
+    "SectionColorBlue": 1.0,
+    "SectionAltColorRed": 0.125,
+    "SectionAltColorGreen": 0.37499994,
+    "SectionAltColorBlue": 0.5,
+    "RemoveSectionDuringBuild": false
+  },
+  "GlobalObjectId_V1-2-d6a4cf6206ce2e84182207b668b67206-915059063-0": {
+    "GameObjectId": "GlobalObjectId_V1-2-d6a4cf6206ce2e84182207b668b67206-915059063-0",
+    "SectionColorRed": 0.0,
+    "SectionColorGreen": 0.77,
+    "SectionColorBlue": 0.77,
+    "SectionAltColorRed": 0.0,
+    "SectionAltColorGreen": 0.77,
+    "SectionAltColorBlue": 0.77,
+    "RemoveSectionDuringBuild": false
+  },
+  "GlobalObjectId_V1-2-d6a4cf6206ce2e84182207b668b67206-2046121699-0": {
+    "GameObjectId": "GlobalObjectId_V1-2-d6a4cf6206ce2e84182207b668b67206-2046121699-0",
+    "SectionColorRed": 0.8333335,
+    "SectionColorGreen": 0.5,
+    "SectionColorBlue": 1.0,
+    "SectionAltColorRed": 0.375000119,
+    "SectionAltColorGreen": 0.125,
+    "SectionAltColorBlue": 0.5,
+    "RemoveSectionDuringBuild": false
+  },
+  "GlobalObjectId_V1-2-d6a4cf6206ce2e84182207b668b67206-1146606406-0": {
+    "GameObjectId": "GlobalObjectId_V1-2-d6a4cf6206ce2e84182207b668b67206-1146606406-0",
+    "SectionColorRed": 0.35,
+    "SectionColorGreen": 0.77,
+    "SectionColorBlue": 0.35,
+    "SectionAltColorRed": 0.35,
+    "SectionAltColorGreen": 0.77,
+    "SectionAltColorBlue": 0.35,
+    "RemoveSectionDuringBuild": false
+  }
+}
