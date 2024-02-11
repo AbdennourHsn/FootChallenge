@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class LeftFoot : MonoBehaviour
 {
-    public Vector3 shootDirection;
+    public Vector3 targetBall;
+    public Vector3 targetPlayer;
     public float force;
 
-    public void SetParameters(Vector3 direction , float force)
+    public void SetParameters(Vector3 target , Vector3 targetPlayer , float force)
     {
-        shootDirection = direction;
+        this.targetBall = target;
+        this.targetPlayer = targetPlayer;
         this.force = force;
-        
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Ball"))
         {
-
-            other.GetComponent<Rigidbody>().AddForce(shootDirection * 15 , ForceMode.Impulse);
+            other.GetComponent<Ball>().Shoot<PlayerController>(this.targetBall , this.targetPlayer);
         }
     }
 }

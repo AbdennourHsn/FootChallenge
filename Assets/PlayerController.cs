@@ -1,17 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     private AnimationManager animManager;
     public LeftFoot leftFoot;
-
+    public LeftFoot rightFoot;
+    private Vector3 initialPos;
     private float smouth=0;
+    public Transform obstacle;
+
+    private void OnEnable()
+    {
+        InputManager.SwipeDone +=ShootBall;
+        GameManager.PlayerWonEvent += Win;
+        GameManager.PlayerLoseEvent += Lose;
+        GameManager.ResetEvent += ResetPlayer;
+    }
+
+    private void OnDisable()
+    {
+        InputManager.SwipeDone -=ShootBall;
+        GameManager.PlayerWonEvent -= Win;
+        GameManager.PlayerLoseEvent -= Lose;
+        GameManager.ResetEvent -= ResetPlayer;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        initialPos = transform.position;
         animManager = this.GetComponent<AnimationManager>();
     }
 
@@ -31,7 +51,6 @@ public class PlayerController : MonoBehaviour
         float smooth = 0f;
         Vector3 initialPosition = transform.position;
         Vector3 targetPosition = new Vector3(pos.x, transform.position.y, transform.position.z);
-
         while (smooth < 1f)
         {
             smooth += Time.deltaTime*time;
@@ -47,9 +66,48 @@ public class PlayerController : MonoBehaviour
         smouth = 0;
     }
 
-    public void ShootBall(Vector3 directiom , float force)
+    public void ShootBall(Vector3 targetball, Vector3 targetPlayer , float force)
     {
-        leftFoot.SetParameters(directiom, force);
+        print("Shooted");
+        leftFoot.SetParameters(targetball, targetPlayer, force);
         animManager.PasseLeft();
+    }
+
+    private void Update()
+    {
+        transform.LookAt(new Vector3(obstacle.position.x, transform.position.y, obstacle.position.z));
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ReloadCurrentScene();
+        }
+    }
+
+    public void ReloadCurrentScene()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+
+    private void Win()
+    {
+        leftFoot.gameObject.SetActive(false);
+        animManager.Victory();
+    }
+
+    private void Lose()
+    {
+        leftFoot.gameObject.SetActive(false);
+        animManager.Lose();
+    }
+
+    public void ActivateShootLeft() => this.leftFoot.gameObject.SetActive(true);
+
+    public void DisactivateShootLeft() => this.leftFoot.gameObject.SetActive(false);
+
+    public void ResetPlayer()
+    {
+        transform.position = this.initialPos;
+        this.animManager.Idle();
     }
 }

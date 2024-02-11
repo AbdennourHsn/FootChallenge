@@ -43,12 +43,12 @@ public class AnimationManager : MonoBehaviour
 
     public void Victory()
     {
-
+        PlayAnimation("Victory");
     }
 
     public void Lose()
     {
-
+        PlayAnimation("Lose");
     }
 
     private void Update()

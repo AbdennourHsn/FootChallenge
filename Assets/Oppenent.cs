@@ -1,17 +1,48 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+public enum Foot
+{
+    right,
+    left
+}
 public class Oppenent : MonoBehaviour
 {
     private AnimationManager animManager;
     public Ball ball;
-    public LeftFoot leftFoot;
+    private Vector3 initialPos;
+    public OppenentFoot leftFoot;
+    public OppenentFoot rightFoot;
+    public Transform obstacle;
+    private Foot footShoot = Foot.left;
     public PlayerController player;
     private bool shooted;
+
+
+    private void OnEnable()
+    {
+        GameManager.PlayerWonEvent += Lose;
+        GameManager.PlayerLoseEvent += Win;
+        GameManager.ResetEvent += ResetOppenent;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.PlayerWonEvent -= Lose;
+        GameManager.PlayerLoseEvent -= Win;
+        GameManager.ResetEvent -= ResetOppenent;
+    }
+
     void Start()
     {
+        initialPos = transform.position;
         animManager = this.GetComponent<AnimationManager>();
+    }
+
+    public void Move(Vector3 target , float force)
+    {
+        MoveTo(target);
     }
 
     public void MoveTo(Vector3 pos, float time = 3f)
@@ -21,8 +52,13 @@ public class Oppenent : MonoBehaviour
         if (transform.position.x < pos.x)
         {
             animManager.MoveRight();
+            footShoot = Foot.right;
         }
-        else animManager.MoveLeft();
+        else
+        {
+            animManager.MoveLeft();
+            footShoot = Foot.left;
+        }
         StartCoroutine(MoveLerping(pos, time));
     }
 
@@ -46,24 +82,58 @@ public class Oppenent : MonoBehaviour
         StopAllCoroutines();
     }
 
-    public void ShootBall( float force=10)
+    private void setFoot(Foot foot)
     {
+        bool right = foot == Foot.right;
+        rightFoot.gameObject.SetActive(!right);
+        leftFoot.gameObject.SetActive(right);
+    }
+
+    public void ShootBall(float force=10)
+    {
+        //print("Oppenet shoot");
         shooted = true;
-        animManager.PasseLeft();
+        setFoot(footShoot);
+        if (footShoot == Foot.left)
+        {
+            animManager.PasseLeft();
+        }
+        else
+            animManager.PasseRight();
     }
     private void Update()
     {
-        Ray ray = new Ray(transform.position, ball.transform.position - transform.position);
+        transform.LookAt(new Vector3(obstacle.position.x, transform.position.y, obstacle.position.z));
 
+        Ray ray = new Ray(transform.position, ball.transform.position - transform.position);
         RaycastHit hit;
         
-        if (Physics.Raycast(ray, out hit, 4))
+        if (Physics.Raycast(ray, out hit, 2))
         {
             if (hit.collider.CompareTag("Ball"))
             {
                 if (shooted) return;
-                ShootBall();
+                if(ball.CanShoot()) ShootBall();
             }
         }
+    }
+
+    private void Win()
+    {
+        leftFoot.gameObject.SetActive(false);
+        animManager.Victory();
+    }
+
+    private void Lose()
+    {
+        leftFoot.gameObject.SetActive(false);
+        animManager.Lose();
+    }
+
+    public void ResetOppenent()
+    {
+        leftFoot.gameObject.SetActive(true);
+        transform.position = initialPos;
+        this.animManager.Idle();
     }
 }
