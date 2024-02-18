@@ -27,11 +27,13 @@ public class Ball : MonoBehaviour
     private void OnEnable()
     {
         GameManager.ResetEvent += ResetBall;
+        GameManager.PlayerWonEvent += StopRotation;
     }
 
     private void OnDisable()
     {
         GameManager.ResetEvent -= ResetBall;
+        GameManager.PlayerWonEvent = StopRotation;
     }
 
     void Start()
@@ -101,6 +103,11 @@ public class Ball : MonoBehaviour
         body.isKinematic = true;
         body.velocity = Vector3.zero;
         body.isKinematic = false;
+    }
+
+    private void StopRotation()
+    {
+        this.rotate = false;
     }
 
     public void Stop()

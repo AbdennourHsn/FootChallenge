@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     private AnimationManager animManager;
-    public LeftFoot leftFoot;
-    public LeftFoot rightFoot;
+    public PlayerFoot leftFoot;
+    public PlayerFoot rightFoot;
     private Vector3 initialPos;
+    private Foot footShoot = Foot.left;
     private float smouth=0;
     public Transform obstacle;
 
@@ -41,8 +42,14 @@ public class PlayerController : MonoBehaviour
         if (transform.position.x < pos.x)
         {
             animManager.MoveRight();
+            footShoot = Foot.right;
         }
-        else animManager.MoveLeft();
+        else
+        {
+            animManager.MoveLeft();
+            footShoot = Foot.left;
+
+        }
         StartCoroutine(MoveLerping(pos, time));
     }
 
@@ -66,11 +73,20 @@ public class PlayerController : MonoBehaviour
         smouth = 0;
     }
 
+
     public void ShootBall(Vector3 targetball, Vector3 targetPlayer , float force)
     {
-        print("Shooted");
-        leftFoot.SetParameters(targetball, targetPlayer, force);
-        animManager.PasseLeft();
+        if (footShoot == Foot.left)
+        {
+            animManager.PasseLeft();
+            leftFoot.SetParameters(targetball, targetPlayer, force);
+
+        }
+        else
+        {
+            animManager.PasseRight();
+            rightFoot.SetParameters(targetball, targetPlayer, force);
+        }
     }
 
     private void Update()
@@ -104,6 +120,11 @@ public class PlayerController : MonoBehaviour
     public void ActivateShootLeft() => this.leftFoot.gameObject.SetActive(true);
 
     public void DisactivateShootLeft() => this.leftFoot.gameObject.SetActive(false);
+
+
+    public void ActivateShootRight() => this.rightFoot.gameObject.SetActive(true);
+
+    public void DisactivateShootRight() => this.rightFoot.gameObject.SetActive(false);
 
     public void ResetPlayer()
     {

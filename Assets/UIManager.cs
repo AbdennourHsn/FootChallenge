@@ -71,4 +71,9 @@ public class UIManager : MonoBehaviour
         RectTransformUtility.ScreenPointToLocalPointInRectangle(canvasRect, screenPosition, mainCamera, out canvasPosition);
         return canvasPosition;
     }
+
+    internal void SetCoin(int nbrCoin)
+    {
+        this.nbrCoin.text = nbrCoin.ToString();
+    }
 }

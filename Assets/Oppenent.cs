@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations.Rigging;
+
 public enum Foot
 {
     right,
@@ -120,15 +122,18 @@ public class Oppenent : MonoBehaviour
 
     private void Win()
     {
-        leftFoot.gameObject.SetActive(false);
         animManager.Victory();
+        rightFoot.gameObject.SetActive(false);
+        leftFoot.gameObject.SetActive(false);
     }
 
     private void Lose()
     {
-        leftFoot.gameObject.SetActive(false);
         animManager.Lose();
+        rightFoot.gameObject.SetActive(false);
+        leftFoot.gameObject.SetActive(false);
     }
+
 
     public void ResetOppenent()
     {

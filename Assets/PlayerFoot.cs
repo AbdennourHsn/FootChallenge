@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LeftFoot : MonoBehaviour
+public class PlayerFoot : MonoBehaviour
 {
     public Vector3 targetBall;
     public Vector3 targetPlayer;

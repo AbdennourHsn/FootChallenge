@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using static UnityEditor.PlayerSettings;
 
 [System.Serializable]
 public class CustomEvents : UnityEvent
@@ -54,8 +55,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void Start()
+    {
+        LoadAndSetData();
+    }
+
     public void PlayerWon_()
     {
+        SaveData();
         nbrOfPassed = 0;
         playerScore += 1;
         PlayerWonEvent?.Invoke();
@@ -64,6 +71,7 @@ public class GameManager : MonoBehaviour
 
     public void PlayerLose_()
     {
+        SaveData();
         nbrOfPassed = 0;
         OppenentScore += 1;
         PlayerLoseEvent?.Invoke();
@@ -105,6 +113,21 @@ public class GameManager : MonoBehaviour
         speedDuration -= speedFactor;
         nbrOfPassed += 1;
         UIManager._instance.updatePasses();
+    }
+
+    private void LoadAndSetData()
+    {
+        PlayerStats stats = SaveManager.LoadData<PlayerStats>();
+        nbrCoin = stats.nbrOfCoins;
+        UIManager._instance.SetCoin(nbrCoin);
+    }
+
+    private void SaveData()
+    {
+        PlayerStats stats = SaveManager.LoadData<PlayerStats>();
+        stats.nbrOfCoins = nbrCoin;
+        if (nbrOfPassed > stats.MaxBallExechange) stats.MaxBallExechange = nbrOfPassed;
+        SaveManager.SaveData(stats);
     }
 
 }
