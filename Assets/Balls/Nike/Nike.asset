@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be1d736663f304d1685b90b35c6f0302, type: 3}
+  m_Name: Nike
+  m_EditorClassIdentifier: 
+  ballName: Nike
+  ballImage: {fileID: 21300000, guid: 14a67e053e29f40d1a4fecec89624aa4, type: 3}
+  ballPrefab: {fileID: 1046450995493811483, guid: d709f22fb426b4b40ba7fe3e95529b5c, type: 3}
+  isAvailable: 1

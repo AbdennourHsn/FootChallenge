@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_FootPass_Challenge/_Scenes/FootPass_Challenge.unity
+    path: Assets/_FootPass_Challenge/_Scenes/Loading_StartScene.unity
+    guid: 421ba6af35e2d6343865b54050403206
+  - enabled: 1
+    path: Assets/_FootPass_Challenge/_Scenes/User.unity
+    guid: 3f16ddd163c7c46b6b22eb0f898c3db0
+  - enabled: 1
+    path: Assets/_FootPass_Challenge/_Scenes/Start.unity
+    guid: 68cef8c2a651647138b7b02d11cc2e98
+  - enabled: 1
+    path: Assets/_FootPass_Challenge/_Scenes/FreePlay.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
