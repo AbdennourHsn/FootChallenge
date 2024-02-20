@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb56aadbd93c9450293679a1a0ac1122, type: 3}
-  m_Name: Azzdine
+  m_Name: Azzeddine
   m_EditorClassIdentifier: 
-  AvatarName: Azzdine
+  AvatarName: Azzeddine
   AvatarPrefab: {fileID: 0}
   isAvailable: 1
