@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be1d736663f304d1685b90b35c6f0302, type: 3}
-  m_Name: Nike
+  m_Name: A314Ball
   m_EditorClassIdentifier: 
-  ballName: Nike
-  ballImage: {fileID: 21300000, guid: 14a67e053e29f40d1a4fecec89624aa4, type: 3}
+  ballName: A314 Ball
+  ballImage: {fileID: 21300000, guid: c83df5bb457cb2643a59adc16c6135bd, type: 3}
   ballPrefab: {fileID: 1046450995493811483, guid: d709f22fb426b4b40ba7fe3e95529b5c, type: 3}
   isAvailable: 1
