@@ -14,7 +14,11 @@ public class ObjectStat
         this.obj = obj;
         Initialposition = obj.transform.position;
         Initialrotation = obj.transform.rotation;
-        if (obj.name == "L") isKinematic = true;
+        if (obj.name == "L")
+        {
+            obj.GetComponent<Collider>().enabled = false;
+            isKinematic = true;
+        }
     }
 
     public void ResetObj()
@@ -22,6 +26,10 @@ public class ObjectStat
         obj.transform.position = Initialposition;
         obj.transform.rotation = Initialrotation;
         obj.GetComponent<Rigidbody>().isKinematic = isKinematic;
+        if (obj.name == "L")
+        {
+            obj.GetComponent<Collider>().enabled = false;
+        }
     }
 }
 
@@ -52,7 +60,11 @@ public class Obstacles : MonoBehaviour
 
     public void OnObstacleItemTouched()
     {
-        foreach (Rigidbody rb in obstacleItems) rb.isKinematic = false;
+        foreach (Rigidbody rb in obstacleItems)
+        {
+            rb.GetComponent<Collider>().enabled = true;
+            rb.isKinematic = false;
+        }
     }
 
     public void ResetObstacle()

@@ -14146,7 +14146,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4158458507146184391}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -16020,7 +16020,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5948835035091887832}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -21291,7 +21291,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5948835035338858511}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -22977,9 +22977,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1220445284}
     m_Modifications:
+    - target: {fileID: 939915519114388538, guid: f7e80f2da07ab54478243a4f93dcf2b3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4868618332054986620, guid: f7e80f2da07ab54478243a4f93dcf2b3, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859579016161166355, guid: f7e80f2da07ab54478243a4f93dcf2b3, type: 3}
+      propertyPath: m_Name
+      value: L
+      objectReference: {fileID: 0}
     - target: {fileID: 5859579016161166355, guid: f7e80f2da07ab54478243a4f93dcf2b3, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8004873267305952499, guid: f7e80f2da07ab54478243a4f93dcf2b3, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8399004638588293977, guid: f7e80f2da07ab54478243a4f93dcf2b3, type: 3}
       propertyPath: m_RootOrder
@@ -23025,12 +23041,52 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9117348129196057440, guid: f7e80f2da07ab54478243a4f93dcf2b3, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9206644705144179171, guid: f7e80f2da07ab54478243a4f93dcf2b3, type: 3}
       propertyPath: m_Name
       value: NewObstacle_BarTwo Cone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7e80f2da07ab54478243a4f93dcf2b3, type: 3}
+--- !u!54 &7542520304343018180 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 1812099961011621368, guid: f7e80f2da07ab54478243a4f93dcf2b3, type: 3}
+  m_PrefabInstance: {fileID: 7542520304343018179}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &7542520304343018181 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 3680155115966517979, guid: f7e80f2da07ab54478243a4f93dcf2b3, type: 3}
+  m_PrefabInstance: {fileID: 7542520304343018179}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &7542520304343018182 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 939915519114388537, guid: f7e80f2da07ab54478243a4f93dcf2b3, type: 3}
+  m_PrefabInstance: {fileID: 7542520304343018179}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7542520304343018183 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9206644705144179171, guid: f7e80f2da07ab54478243a4f93dcf2b3, type: 3}
+  m_PrefabInstance: {fileID: 7542520304343018179}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7542520304343018184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7542520304343018183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ebcc535ef6454df586cb5176184c372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleItems:
+  - {fileID: 7542520304343018182}
+  - {fileID: 7542520304343018181}
+  - {fileID: 7542520304343018180}
 --- !u!4 &7547941633119417297
 Transform:
   m_ObjectHideFlags: 0
@@ -23248,7 +23304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1046450995493811483, guid: 8c01f78b2365d4fbfb8028741b3f2f48, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c01f78b2365d4fbfb8028741b3f2f48, type: 3}

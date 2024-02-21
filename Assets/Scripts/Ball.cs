@@ -122,8 +122,8 @@ public class Ball : MonoBehaviour
         if (missed) return;
         if (collision.gameObject.CompareTag("Obstacle"))
         {
+            collision.transform.GetComponent<Rigidbody>().AddForce(Vector3.forward*5, ForceMode.Impulse);
             collision.gameObject.GetComponentInParent<Obstacles>().OnObstacleItemTouched();
-            collision.transform.GetComponent<Rigidbody>().AddForce(Vector3.forward*2, ForceMode.Impulse);
             Stop();
             missed = true;
             ObstacleTouched();
