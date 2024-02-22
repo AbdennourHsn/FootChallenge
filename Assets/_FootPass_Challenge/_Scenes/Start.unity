@@ -180,7 +180,11 @@ MonoBehaviour:
   offsetAngle: 171.13364
   offsetDistance: 12
   offset: {x: -11.8566065, y: -1.8495636}
-  color: {r: 0, g: 0, b: 0, a: 0.6}
+  color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0.6
   inset: 0
   blendMode: 0
   useCasterAlpha: 1
@@ -192,6 +196,16 @@ MonoBehaviour:
   baked: 0
   modifiedFromInspector: 0
   bakedShadows: []
+  shadowRenderer: {fileID: 0}
+  <SpriteMesh>k__BackingField: {fileID: 0}
+  <Graphic>k__BackingField: {fileID: 0}
+  <CanvasRenderer>k__BackingField: {fileID: 0}
+  <RectTransform>k__BackingField: {fileID: 0}
+  customHash: 0
+  textureDirty: 0
+  layoutDirty: 0
+  <HierachyDirty>k__BackingField: 0
+  <TextureRevision>k__BackingField: 0
 --- !u!114 &27271859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1359,7 +1373,11 @@ MonoBehaviour:
   offsetAngle: 171.13364
   offsetDistance: 12
   offset: {x: -11.856604, y: -1.8495631}
-  color: {r: 0, g: 0, b: 0, a: 0.6}
+  color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0.6
   inset: 0
   blendMode: 0
   useCasterAlpha: 1
@@ -1371,6 +1389,16 @@ MonoBehaviour:
   baked: 0
   modifiedFromInspector: 0
   bakedShadows: []
+  shadowRenderer: {fileID: 0}
+  <SpriteMesh>k__BackingField: {fileID: 0}
+  <Graphic>k__BackingField: {fileID: 0}
+  <CanvasRenderer>k__BackingField: {fileID: 0}
+  <RectTransform>k__BackingField: {fileID: 0}
+  customHash: 0
+  textureDirty: 0
+  layoutDirty: 0
+  <HierachyDirty>k__BackingField: 0
+  <TextureRevision>k__BackingField: 0
 --- !u!114 &355745778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1899,8 +1927,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Leaderboards
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2009,7 +2037,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 93.04268, y: -69.8255}
+  m_AnchoredPosition: {x: 93.04267, y: -69.8255}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &419285908
@@ -3095,7 +3123,11 @@ MonoBehaviour:
   offsetAngle: 171.13364
   offsetDistance: 12
   offset: {x: -11.8566065, y: -1.8495636}
-  color: {r: 0, g: 0, b: 0, a: 0.6}
+  color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0.6
   inset: 0
   blendMode: 0
   useCasterAlpha: 1
@@ -3107,6 +3139,16 @@ MonoBehaviour:
   baked: 0
   modifiedFromInspector: 0
   bakedShadows: []
+  shadowRenderer: {fileID: 0}
+  <SpriteMesh>k__BackingField: {fileID: 0}
+  <Graphic>k__BackingField: {fileID: 0}
+  <CanvasRenderer>k__BackingField: {fileID: 0}
+  <RectTransform>k__BackingField: {fileID: 0}
+  customHash: 0
+  textureDirty: 0
+  layoutDirty: 0
+  <HierachyDirty>k__BackingField: 0
+  <TextureRevision>k__BackingField: 0
 --- !u!114 &661147258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5519,7 +5561,11 @@ MonoBehaviour:
   offsetAngle: 171.13364
   offsetDistance: 12
   offset: {x: -11.856604, y: -1.8495631}
-  color: {r: 0, g: 0, b: 0, a: 0.6}
+  color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0.6
   inset: 0
   blendMode: 0
   useCasterAlpha: 1
@@ -5531,6 +5577,16 @@ MonoBehaviour:
   baked: 0
   modifiedFromInspector: 0
   bakedShadows: []
+  shadowRenderer: {fileID: 0}
+  <SpriteMesh>k__BackingField: {fileID: 0}
+  <Graphic>k__BackingField: {fileID: 0}
+  <CanvasRenderer>k__BackingField: {fileID: 0}
+  <RectTransform>k__BackingField: {fileID: 0}
+  customHash: 0
+  textureDirty: 0
+  layoutDirty: 0
+  <HierachyDirty>k__BackingField: 0
+  <TextureRevision>k__BackingField: 0
 --- !u!114 &1169582785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6328,11 +6384,15 @@ PrefabInstance:
     - target: {fileID: -1995193734550662009, guid: 2f07778884e8a405ab06aec1f11422ed, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a521a58305bbcfd4bbadf9509d5132b4, type: 2}
+      objectReference: {fileID: 2100000, guid: c90c3f4b34ef75a46bb81ca625ed4b77, type: 2}
     - target: {fileID: -480710557608370346, guid: 2f07778884e8a405ab06aec1f11422ed, type: 3}
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -480710557608370346, guid: 2f07778884e8a405ab06aec1f11422ed, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c90c3f4b34ef75a46bb81ca625ed4b77, type: 2}
     - target: {fileID: 919132149155446097, guid: 2f07778884e8a405ab06aec1f11422ed, type: 3}
       propertyPath: m_Name
       value: Azzeddine
@@ -6352,7 +6412,7 @@ PrefabInstance:
     - target: {fileID: 5555716678201972220, guid: 2f07778884e8a405ab06aec1f11422ed, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 4816656806095344631, guid: 3dcb193e5a49bbe4ebcdba99b79991dd, type: 3}
+      objectReference: {fileID: 2100000, guid: c90c3f4b34ef75a46bb81ca625ed4b77, type: 2}
     - target: {fileID: 5798539708581724550, guid: 2f07778884e8a405ab06aec1f11422ed, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -6389,6 +6449,10 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8633745042012201979, guid: 2f07778884e8a405ab06aec1f11422ed, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c90c3f4b34ef75a46bb81ca625ed4b77, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f07778884e8a405ab06aec1f11422ed, type: 3}
 --- !u!4 &1393479401 stripped
@@ -6667,12 +6731,21 @@ MonoBehaviour:
   blurAlgorithmSelection: 0
   blurConfig: {fileID: 11400000, guid: 45ac4b3d5f9dfc746a89d180929cc72e, type: 2}
   downsample: 0
+  lastDownsample: 0
   blurRegion:
-    serializedVersion: 2
     x: 0
     y: 0
     width: 1
     height: 1
+  lastBlurRegion:
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  camera: {fileID: 1435215417}
+  previewMaterial: {fileID: 0}
+  blurredScreen: {fileID: 0}
+  lastUpdate: 2891.2654
 --- !u!1 &1448878657
 GameObject:
   m_ObjectHideFlags: 0
@@ -7295,7 +7368,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 725.9987, y: -69.8255}
+  m_AnchoredPosition: {x: 725.99866, y: -69.8255}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1519450875
@@ -7532,7 +7605,11 @@ MonoBehaviour:
   offsetAngle: 171.13364
   offsetDistance: 12
   offset: {x: -11.8566065, y: -1.8495636}
-  color: {r: 0, g: 0, b: 0, a: 0.6}
+  color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0.6
   inset: 0
   blendMode: 0
   useCasterAlpha: 1
@@ -7544,6 +7621,16 @@ MonoBehaviour:
   baked: 0
   modifiedFromInspector: 0
   bakedShadows: []
+  shadowRenderer: {fileID: 0}
+  <SpriteMesh>k__BackingField: {fileID: 0}
+  <Graphic>k__BackingField: {fileID: 0}
+  <CanvasRenderer>k__BackingField: {fileID: 0}
+  <RectTransform>k__BackingField: {fileID: 0}
+  customHash: 0
+  textureDirty: 0
+  layoutDirty: 0
+  <HierachyDirty>k__BackingField: 0
+  <TextureRevision>k__BackingField: 0
 --- !u!114 &1546917593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8372,7 +8459,11 @@ MonoBehaviour:
   offsetAngle: 171.13364
   offsetDistance: 12
   offset: {x: -11.8566065, y: -1.8495636}
-  color: {r: 0, g: 0, b: 0, a: 0.6}
+  color:
+    r: 0
+    g: 0
+    b: 0
+    a: 0.6
   inset: 0
   blendMode: 0
   useCasterAlpha: 1
@@ -8384,6 +8475,16 @@ MonoBehaviour:
   baked: 0
   modifiedFromInspector: 0
   bakedShadows: []
+  shadowRenderer: {fileID: 0}
+  <SpriteMesh>k__BackingField: {fileID: 0}
+  <Graphic>k__BackingField: {fileID: 0}
+  <CanvasRenderer>k__BackingField: {fileID: 0}
+  <RectTransform>k__BackingField: {fileID: 0}
+  customHash: 0
+  textureDirty: 0
+  layoutDirty: 0
+  <HierachyDirty>k__BackingField: 0
+  <TextureRevision>k__BackingField: 0
 --- !u!114 &1683936189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8561,7 +8662,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 780651207}
   m_HandleRect: {fileID: 780651206}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -8915,7 +9016,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 723.9872, y: -69.8255}
+  m_AnchoredPosition: {x: 723.9871, y: -69.8255}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1758558723
@@ -9261,7 +9362,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 60.054214, y: -69.8255}
+  m_AnchoredPosition: {x: 60.054207, y: -69.8255}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1834906591
@@ -9814,7 +9915,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 515.01337, y: -69.8255}
+  m_AnchoredPosition: {x: 515.0133, y: -69.8255}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2092614711
