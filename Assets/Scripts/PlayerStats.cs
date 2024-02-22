@@ -8,6 +8,7 @@ public class PlayerStats
     public string avatar;
     public string stadium;
     public int level;
+    public int diffeculty;
     public string ball;
     public int nbrOfCoins;
     public int MaxBallExechange;

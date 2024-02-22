@@ -26,4 +26,9 @@ public class SetPlayerName : MonoBehaviour
         SaveManager.SaveData(player);
         SceneManager.LoadScene("Start");
     }
+
+    public void Clear()
+    {
+        inputField.text = "";
+    }
 }

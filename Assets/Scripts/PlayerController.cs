@@ -10,8 +10,9 @@ public class PlayerController : MonoBehaviour
     public PlayerFoot rightFoot;
     private Vector3 initialPos;
     private Foot footShoot = Foot.left;
-    private float smouth=0;
     public Transform obstacle;
+
+    private bool isFinished;
 
     private void OnEnable()
     {
@@ -70,7 +71,6 @@ public class PlayerController : MonoBehaviour
     private void CancelMoving()
     {
         StopAllCoroutines();
-        smouth = 0;
     }
 
 
@@ -91,6 +91,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (isFinished) return;
         transform.LookAt(new Vector3(obstacle.position.x, transform.position.y, obstacle.position.z));
 
         if (Input.GetKeyDown(KeyCode.Space))

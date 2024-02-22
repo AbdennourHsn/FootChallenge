@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager _instance;
     public OppenentLevel oppenentLevel = OppenentLevel.medium;
+    public bool isMatch;
     [HideInInspector]
     public int nbrOfPassed;
     [HideInInspector]
@@ -38,14 +39,25 @@ public class GameManager : MonoBehaviour
     public float speedDuration=1.5f;
     public float speedFactor=0.02f;
 
+
+
     [Space(10)]
     
     [SerializeField]
     private Transform ballPosition;
 
-    [Space(10)]
+    [SerializeField]
+    private PlayerController[] players;
+
+    [Space(20)]
     [Header("Game life cycle")]
     public CustomEvents OnGameStart;
+
+    [Space(10)]
+    [SerializeField]
+    public CustomEvents OnPlayerWonMatch;
+    public CustomEvents OnPlayerLoseMatch;
+
 
     private void Awake()
     {
@@ -97,8 +109,37 @@ public class GameManager : MonoBehaviour
 
     IEnumerator ResetCourotine()
     {
-        yield return new WaitForSeconds(2);
-        this.Reset_();
+        if (isMatch)
+        {
+            if (OppenentScore > 5)
+            {
+                PlayerLoseMatch();
+            }
+            else if (playerScore>5)
+            {
+                PlayerWonMatch();
+            }
+            else
+            {
+                yield return new WaitForSeconds(2);
+                this.Reset_();
+            }
+        }
+        else
+        {
+            yield return new WaitForSeconds(2);
+            this.Reset_();
+        }
+    }
+
+    private void PlayerWonMatch()
+    {
+        OnPlayerWonMatch?.Invoke();
+    }
+
+    private void PlayerLoseMatch()
+    {
+        OnPlayerLoseMatch?.Invoke();
     }
 
     public void GetCoin(Vector3 pos)
@@ -125,6 +166,13 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Start");
     }
 
+    public void ReloadScene()
+    {
+        SaveData();
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
+    }
+
     private void LoadAndSetData()
     {
         PlayerStats stats = SaveManager.LoadData<PlayerStats>();
@@ -133,6 +181,11 @@ public class GameManager : MonoBehaviour
         UIManager._instance.SetPlayerName(stats.PlayerName);
         BallSO ball = AssetHandler._instance.balls.Find(b => b.ballName == stats.ball);
         Instantiate(ball.ballPrefab, ballPosition.position, Quaternion.identity);
+        if (stats.avatar == "Richardson") players[0].gameObject.SetActive(true);
+        else players[1].gameObject.SetActive(true);
+
+        if (stats.diffeculty == 2) this.oppenentLevel = OppenentLevel.expert;
+        else this.oppenentLevel = OppenentLevel.medium;
     }
 
     private void SaveData()

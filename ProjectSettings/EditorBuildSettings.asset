@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_FootPass_Challenge/_Scenes/FreePlay.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/_FootPass_Challenge/_Scenes/Match.unity
+    guid: 468988224c8d6424c93281df9f4a17da
   m_configObjects: {}
